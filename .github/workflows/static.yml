@@ -27,6 +27,8 @@ jobs:
         run: |
           cd my-react-portfolio
           npm install
+          # This forces the missing tool to install
+          npm install -D @tailwindcss/postcss tailwindcss autoprefixer
           npm run build
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
