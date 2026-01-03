@@ -2,16 +2,14 @@ import React, { useState } from 'react';
 import ContactAside from '../components/ContactAside';
 
 const Home = () => {
-  // State for the accordion functionality
+  
   const [isAccordionOpen, setIsAccordionOpen] = useState(true);
 
   return (
     <main className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 p-4">
       
-      {/* Main Content Article (Takes up 2/3 of the width) */}
       <article id="main" className="col-span-1 md:col-span-2 bg-yellow-100 p-4 rounded-lg shadow-sm">
         
-        {/* Alert Box */}
         <div className="bg-blue-200 text-blue-900 p-3 rounded mb-4 border border-blue-300">
           Welcome to my page!
         </div>
@@ -26,19 +24,20 @@ const Home = () => {
           
           <h3 className="text-xl font-semibold mb-3 border-b-2 border-gray-300 pb-1">Introduction</h3>
 
-          {/* Profile Card */}
+          {/* This section now uses the correct path for your public folder image */}
           <div className="w-80 border border-gray-300 rounded-lg shadow-md mb-6 bg-white overflow-hidden">
-            {/* NOTE: Make sure to copy your 'image.jpg' into the 'public' folder 
-               of your new project for this image to show up! 
-            */}
-            <img src="/image.jpg" className="w-full h-auto" alt="Profile" />
+            <img 
+              src={`${import.meta.env.BASE_URL}image.jpg`} 
+              className="w-full h-auto" 
+              alt="Jon Catipon Profile" 
+            />
             <div className="p-3">
               <p className="text-sm text-gray-600">My profile picture</p>
             </div>
           </div>
         </section>
 
-        {/* Accordion Section */}
+        
         <div className="border border-gray-300 rounded-lg bg-white overflow-hidden">
           <h2 className="border-b border-gray-300">
             <button 
@@ -50,7 +49,6 @@ const Home = () => {
             </button>
           </h2>
           
-          {/* Conditional rendering for the accordion body */}
           {isAccordionOpen && (
             <div className="p-4 bg-white text-gray-700 leading-relaxed">
               <p>
@@ -65,7 +63,6 @@ const Home = () => {
 
       </article>
 
-      {/* Sidebar (Contact Component) */}
       <ContactAside />
 
     </main>
