@@ -1,37 +1,57 @@
 import React from 'react';
 
 const Projects = () => {
-  const myWork = [
-    { 
-      title: "Smart Environmental Monitor", 
-      tech: "Arduino, TMP36, I2C LCD", 
-      desc: "An automated system tracking temperature and light levels with real-time LCD feedback." 
+  const projects = [
+    {
+      title: "Smart Environmental Monitor",
+      tech: "ARDUINO, TMP36, I2C LCD",
+      description: "An automated system tracking temperature and light levels with real-time LCD feedback.",
+      image: "smart arduino.png", 
     },
-    { 
-      title: "3-Servo Robotic Arm", 
-      tech: "Arduino, Servo Control", 
-      desc: "A precision robotic design utilizing three servos for coordinated movement." 
+    {
+      title: "3-Servo Robotic Arm",
+      tech: "ARDUINO, SERVO CONTROL",
+      description: "A precision robotic design utilizing three servos for coordinated movement.",
+      image: "servo arduino.png", 
     },
-    { 
-      title: "Physics Kinematics Engine", 
-      tech: "React, JavaScript", 
-      desc: "A calculator designed to solve displacement, velocity, and acceleration problems." 
+    {
+      title: "Physics Kinematics Engine",
+      tech: "REACT, JAVASCRIPT",
+      description: "A calculator designed to solve displacement, velocity, and acceleration problems.",
+      image: "sddefault.jpg", 
     }
   ];
 
   return (
-    <section className="py-10">
-      <h2 className="text-4xl font-bold mb-12 text-center">Featured Projects</h2>
-      <div className="grid md:grid-cols-3 gap-8">
-        {myWork.map((project, index) => (
-          <div key={index} className="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-xl border border-gray-100 dark:border-gray-700">
-            <h3 className="text-2xl font-bold mb-3 text-blue-600 dark:text-blue-400">{project.title}</h3>
-            <span className="text-xs font-mono uppercase tracking-widest text-gray-500">{project.tech}</span>
-            <p className="mt-4 text-gray-600 dark:text-gray-400 leading-relaxed">{project.desc}</p>
+    <div className="container mx-auto py-12 px-4">
+      <h1 className="text-4xl font-bold text-center mb-12 text-gray-800">Featured Projects</h1>
+      
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        {projects.map((project, index) => (
+          <div key={index} className="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-shadow duration-300 flex flex-col">
+            
+            <div className="h-48 bg-gray-100 flex items-center justify-center overflow-hidden border-b border-gray-100">
+              <img 
+                src={`${import.meta.env.BASE_URL}${project.image}`} 
+                alt={project.title}
+                className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-500"
+              />
+            </div>
+
+            
+            <div className="p-6 flex-grow">
+              <h3 className="text-xl font-bold text-blue-600 mb-2">{project.title}</h3>
+              <p className="text-xs font-semibold text-gray-400 tracking-widest mb-4 uppercase">
+                {project.tech}
+              </p>
+              <p className="text-gray-600 text-sm leading-relaxed">
+                {project.description}
+              </p>
+            </div>
           </div>
         ))}
       </div>
-    </section>
+    </div>
   );
 };
 
