@@ -44,7 +44,7 @@ const About = () => {
         </section>
 
         <footer className="mt-10 pt-6 border-t border-gray-100 text-sm text-gray-500 italic">
-          Created by Jon Catipon - Computer Science Midterm Portfolio 2026
+          Created by Jon Catipon
         </footer>
       </article>
     </main>
