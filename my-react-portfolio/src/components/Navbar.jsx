@@ -5,7 +5,6 @@ const Navbar = ({ isDark, setIsDark }) => {
   return (
     <nav className="bg-gray-100 dark:bg-gray-800 shadow-lg sticky top-0 z-50">
       <div className="container mx-auto px-6 py-4 flex justify-between items-center">
-        {/* Updated the link text below */}
         <Link to="/" className="text-2xl font-bold text-blue-600 dark:text-blue-400">
           Jon Catipon's Portfolio
         </Link>
