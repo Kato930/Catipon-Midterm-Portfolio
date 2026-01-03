@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Apply your original background color for the body */
+body {
+  background-color: #fef6e4; 
+  color: #333;
+}
