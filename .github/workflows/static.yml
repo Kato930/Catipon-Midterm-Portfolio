@@ -27,9 +27,8 @@ jobs:
         run: |
           cd my-react-portfolio
           npm install
+          # This installs the exact versions needed for your stylish UI
           npm install -D tailwindcss postcss autoprefixer
-          # This line forces Tailwind to generate your stylish CSS
-          npx tailwindcss -i ./src/index.css -o ./dist/output.css
           npm run build
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
