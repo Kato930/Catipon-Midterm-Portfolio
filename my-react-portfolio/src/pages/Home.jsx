@@ -24,7 +24,6 @@ const Home = () => {
           
           <h3 className="text-xl font-semibold mb-3 border-b-2 border-gray-300 pb-1">Introduction</h3>
 
-          {/* This section now uses the correct path for your public folder image */}
           <div className="w-80 border border-gray-300 rounded-lg shadow-md mb-6 bg-white overflow-hidden">
             <img 
               src={`${import.meta.env.BASE_URL}image.jpg`} 
