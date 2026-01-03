@@ -27,8 +27,9 @@ jobs:
         run: |
           cd my-react-portfolio
           npm install
-          # This forces the missing tool to install
-          npm install -D @tailwindcss/postcss tailwindcss autoprefixer
+          npm install -D tailwindcss postcss autoprefixer
+          # This line forces Tailwind to generate your stylish CSS
+          npx tailwindcss -i ./src/index.css -o ./dist/output.css
           npm run build
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
