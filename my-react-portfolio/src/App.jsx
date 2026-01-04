@@ -20,22 +20,23 @@ function App() {
 
   return (
     <Router>
-      <div className="min-h-screen w-full flex flex-col items-center bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-300">
+      {/* Outer wrapper for the background color */}
+      <div className="min-h-screen w-full bg-[#fef6e4] dark:bg-gray-900 transition-colors duration-300">
         
-        <div className="w-full">
+        {/* Inner wrapper that CENTERS everything (Navbar, Main, Footer) */}
+        <div className="max-w-6xl mx-auto flex flex-col min-h-screen bg-white dark:bg-gray-800 shadow-lg">
+          
           <Navbar isDark={isDark} setIsDark={setIsDark} />
-        </div>
-        
-        <main className="flex-grow w-full max-w-5xl px-4 py-8">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/projects" element={<Projects />} />
-            <Route path="*" element={<Home />} />
-          </Routes>
-        </main>
-        
-        <div className="w-full">
+          
+          <main className="flex-grow w-full px-6 py-8">
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/projects" element={<Projects />} />
+              <Route path="*" element={<Home />} />
+            </Routes>
+          </main>
+          
           <Footer />
         </div>
       </div>
