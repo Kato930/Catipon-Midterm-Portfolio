@@ -10,16 +10,14 @@ function App() {
   const [isDark, setIsDark] = useState(false);
 
   return (
-    <div className={`${isDark ? 'dark' : ''} min-h-screen flex flex-col bg-white dark:bg-gray-900`}>
+    <div className={`${isDark ? 'dark' : ''} min-h-screen flex flex-col bg-white dark:bg-gray-900 transition-colors duration-300`}>
       <Navbar isDark={isDark} setIsDark={setIsDark} />
       
       <main className="flex-grow">
-        {/* We are showing Home directly to bypass all Routing errors */}
-        <Home />
-        <hr className="my-10 border-gray-200" />
-        <About />
-        <hr className="my-10 border-gray-200" />
-        <Projects />
+        
+        <div id="home"><Home /></div>
+        <div id="about" className="bg-gray-50 dark:bg-gray-800 py-10"><About /></div>
+        <div id="projects"><Projects /></div>
       </main>
 
       <Footer />
