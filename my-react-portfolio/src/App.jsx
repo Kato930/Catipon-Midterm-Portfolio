@@ -9,6 +9,7 @@ import './App.css';
 
 function App() {
   const [isDark, setIsDark] = useState(false);
+
   useEffect(() => {
     if (isDark) {
       document.documentElement.classList.add('dark');
@@ -20,18 +21,24 @@ function App() {
   return (
     <Router>
       <div className="min-h-screen w-full flex flex-col bg-[#fef6e4] dark:bg-gray-900 transition-colors duration-300">
+        
         <Navbar isDark={isDark} setIsDark={setIsDark} />
-        <main className="flex-grow w-full px-4 sm:px-10 lg:px-16 py-8">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/projects" element={<Projects />} />
-            <Route path="*" element={<Home />} />
-          </Routes>
+        
+        <main className="flex-grow w-full flex justify-center py-8">
+          <div className="w-full max-w-7xl px-4 sm:px-10 lg:px-16">
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/projects" element={<Projects />} />
+              <Route path="*" element={<Home />} />
+            </Routes>
+          </div>
         </main>
+        
         <Footer />
       </div>
     </Router>
   );
 }
+
 export default App;
