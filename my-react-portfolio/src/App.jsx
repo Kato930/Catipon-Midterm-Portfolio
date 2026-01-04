@@ -25,7 +25,6 @@ function App() {
         
         <main className="flex-grow">
           <Routes>
-            {/* Setting "/" as the path ensures the link takes you straight to Home */}
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/projects" element={<Projects />} />
