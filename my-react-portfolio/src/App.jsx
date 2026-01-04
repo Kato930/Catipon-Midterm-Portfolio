@@ -9,7 +9,6 @@ import './App.css';
 
 function App() {
   const [isDark, setIsDark] = useState(false);
-
   useEffect(() => {
     if (isDark) {
       document.documentElement.classList.add('dark');
@@ -35,5 +34,4 @@ function App() {
     </Router>
   );
 }
-
 export default App;
