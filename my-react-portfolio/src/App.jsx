@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Home from './pages/Home';
@@ -11,6 +11,7 @@ function App() {
   const [isDark, setIsDark] = useState(false);
 
   return (
+    /* HashRouter fixes the "Uncaught Error" by handling the URL locally */
     <Router>
       <div className={`${isDark ? 'dark' : ''} min-h-screen flex flex-col bg-white dark:bg-gray-900 transition-colors duration-300`}>
         <Navbar isDark={isDark} setIsDark={setIsDark} />
@@ -20,6 +21,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/projects" element={<Projects />} />
+            {/* Redirects any broken links back to Home */}
             <Route path="*" element={<Home />} />
           </Routes>
         </div>
