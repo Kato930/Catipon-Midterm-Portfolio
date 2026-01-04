@@ -25,14 +25,13 @@ jobs:
           node-version: 20
       - name: Install and Build
         run: |
-          # Removed the "cd" command so it builds from your main folder
+          cd my-react-portfolio
           npm install
           npm run build
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          
-          path: './dist'
+          path: './my-react-portfolio/dist'
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
