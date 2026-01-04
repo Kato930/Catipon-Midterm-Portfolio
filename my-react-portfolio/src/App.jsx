@@ -17,11 +17,11 @@ function App() {
         
         <div className="flex-grow">
           <Routes>
-            {/* These routes restore your separate pages */}
+            
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/projects" element={<Projects />} />
-            {/* Fallback to Home */}
+            
             <Route path="*" element={<Home />} />
           </Routes>
         </div>
