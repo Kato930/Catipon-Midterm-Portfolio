@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Home from './pages/Home';
@@ -11,22 +10,20 @@ function App() {
   const [isDark, setIsDark] = useState(false);
 
   return (
-    <Router>
-      <div className={`${isDark ? 'dark' : ''} min-h-screen flex flex-col bg-white dark:bg-gray-900 transition-colors duration-300`}>
-        <Navbar isDark={isDark} setIsDark={setIsDark} />
-        
-        <div className="flex-grow">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/projects" element={<Projects />} />
-            <Route path="*" element={<Home />} />
-          </Routes>
-        </div>
+    <div className={`${isDark ? 'dark' : ''} min-h-screen flex flex-col bg-white dark:bg-gray-900`}>
+      <Navbar isDark={isDark} setIsDark={setIsDark} />
+      
+      <main className="flex-grow">
+        {/* We are showing Home directly to bypass all Routing errors */}
+        <Home />
+        <hr className="my-10 border-gray-200" />
+        <About />
+        <hr className="my-10 border-gray-200" />
+        <Projects />
+      </main>
 
-        <Footer />
-      </div>
-    </Router>
+      <Footer />
+    </div>
   );
 }
 
