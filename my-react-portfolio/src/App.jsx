@@ -20,20 +20,27 @@ function App() {
 
   return (
     <Router>
-      <div className="min-h-screen w-full flex flex-col bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-300">
-        <Navbar isDark={isDark} setIsDark={setIsDark} />
+      <div className="min-h-screen w-full flex flex-col items-center bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-300">
         
-        {/* The classes below center your content and remove the right-side gap */}
-        <main className="flex-grow w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/projects" element={<Projects />} />
-            <Route path="*" element={<Home />} />
-          </Routes>
+        <div className="w-full">
+          <Navbar isDark={isDark} setIsDark={setIsDark} />
+        </div>
+        
+        <main className="flex-grow w-full max-w-screen-xl flex flex-col items-center px-4 sm:px-6 lg:px-8">
+          <div className="w-full">
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/projects" element={<Projects />} />
+              <Route path="*" element={<Home />} />
+            </Routes>
+          </div>
         </main>
         
-        <Footer />
+        
+        <div className="w-full">
+          <Footer />
+        </div>
       </div>
     </Router>
   );
