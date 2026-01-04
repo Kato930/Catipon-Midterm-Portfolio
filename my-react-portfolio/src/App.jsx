@@ -26,17 +26,14 @@ function App() {
           <Navbar isDark={isDark} setIsDark={setIsDark} />
         </div>
         
-        <main className="flex-grow w-full max-w-screen-xl flex flex-col items-center px-4 sm:px-6 lg:px-8">
-          <div className="w-full">
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/about" element={<About />} />
-              <Route path="/projects" element={<Projects />} />
-              <Route path="*" element={<Home />} />
-            </Routes>
-          </div>
+        <main className="flex-grow w-full max-w-5xl px-4 py-8">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/projects" element={<Projects />} />
+            <Route path="*" element={<Home />} />
+          </Routes>
         </main>
-        
         
         <div className="w-full">
           <Footer />
