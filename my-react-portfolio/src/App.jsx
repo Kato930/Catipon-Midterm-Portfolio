@@ -20,7 +20,7 @@ function App() {
 
   return (
     <Router>
-      <div className="min-h-screen flex flex-col bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-300">
+      <div className="min-h-screen w-full flex flex-col bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-300">
         <Navbar isDark={isDark} setIsDark={setIsDark} />
         <main className="flex-grow">
           <Routes>
@@ -36,4 +36,4 @@ function App() {
   );
 }
 
-export default App; // THIS IS THE LINE THAT WAS MISSING
+export default App; 
