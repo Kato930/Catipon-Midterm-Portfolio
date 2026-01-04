@@ -11,8 +11,7 @@ function App() {
   const [isDark, setIsDark] = useState(false);
 
   return (
-    /* This dynamic basename fixes the crash by matching your vite.config.js automatically */
-    <Router basename={import.meta.env.BASE_URL}>
+    <Router>
       <div className={`${isDark ? 'dark' : ''} min-h-screen flex flex-col bg-white dark:bg-gray-900 transition-colors duration-300`}>
         <Navbar isDark={isDark} setIsDark={setIsDark} />
         
