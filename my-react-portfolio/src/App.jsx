@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Home from './pages/Home';
@@ -17,9 +17,9 @@ function App() {
         
         <div className="flex-grow">
           <Routes>
-            <Route path="/Catipon-Midterm-Portfolio/" element={<Home />} />
-            <Route path="/Catipon-Midterm-Portfolio/about" element={<About />} />
-            <Route path="/Catipon-Midterm-Portfolio/projects" element={<Projects />} />
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/projects" element={<Projects />} />
             <Route path="*" element={<Home />} />
           </Routes>
         </div>
