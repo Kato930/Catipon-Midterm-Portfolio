@@ -22,7 +22,9 @@ function App() {
     <Router>
       <div className="min-h-screen w-full flex flex-col bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-300">
         <Navbar isDark={isDark} setIsDark={setIsDark} />
-        <main className="flex-grow">
+        
+        {/* The classes below center your content and remove the right-side gap */}
+        <main className="flex-grow w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
@@ -30,10 +32,11 @@ function App() {
             <Route path="*" element={<Home />} />
           </Routes>
         </main>
+        
         <Footer />
       </div>
     </Router>
   );
 }
 
-export default App; 
+export default App;
