@@ -31,7 +31,7 @@ const Home = () => {
               alt="Jon Catipon Profile" 
             />
             <div className="p-4 bg-white dark:bg-gray-800">
-              <p className="text-sm text-gray-500 dark:text-gray-400 font-medium italic text-center">Jon Catipon - Profile Preview</p>
+              <p className="text-sm text-gray-500 dark:text-gray-400 font-medium italic text-center">Jon Catipon - Profile Picture</p>
             </div>
           </div>
         </section>
@@ -42,7 +42,7 @@ const Home = () => {
               className="w-full text-left p-4 font-semibold bg-gray-50 dark:bg-gray-800 hover:bg-gray-100 dark:hover:bg-gray-700 flex justify-between items-center transition duration-200 dark:text-white"
               onClick={() => setIsAccordionOpen(!isAccordionOpen)}
             >
-              <span>Info about this page</span>
+              <span>Info about my background</span>
               <span className="text-xl text-blue-500">{isAccordionOpen ? '−' : '+'}</span>
             </button>
           </h2>
@@ -50,7 +50,7 @@ const Home = () => {
           {isAccordionOpen && (
             <div className="p-6 text-gray-700 dark:text-gray-300 leading-relaxed animate-in fade-in duration-500">
               <p>
-                This website was created as part of my journey as a Computer Science student. I am studying programming, databases, and data analysis, and I plan to pursue a career in data science. I enjoy working with Python, SQL, and other tools that help me understand data.
+                As a Computer Science student, I have focused my studies on building a strong foundation in both software development and logic-based problem solving. My journey so far has taken me from learning the basics of programming to developing dynamic web applications using React and Tailwind CSS. I enjoy the challenge of turning complex concepts—like the kinematics and vector mathematics I study in Physics 1—into functional digital tools like my Kinematics Engine. Beyond standard web development, I have a deep interest in how software interacts with the physical world through hardware. This is best seen in my Arduino projects, where I have successfully built and programmed a 3-Servo Robotic Arm and a Smart Environmental Monitor. These projects required me to master I2C communication protocols, sensor calibration for components like the TMP36, and precise multi-axis logic to ensure smooth mechanical movement. My technical toolkit currently includes JavaScript, React, and SQL for data management, alongside my hands-on experience with electronics. I am constantly looking for ways to bridge the gap between hardware data and software analysis, as I eventually hope to transition into a career as a Data Scientist. For now, I am dedicated to refining my skills through practical projects that challenge my understanding of both code and the physical laws that govern it.
               </p>
               <span className="block mt-4 text-xs font-bold text-gray-400 uppercase tracking-tighter">
                 Updated: <time dateTime="2025-11-17">Nov 17, 2025</time>
