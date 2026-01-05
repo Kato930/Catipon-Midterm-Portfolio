@@ -23,14 +23,19 @@ const Projects = () => {
   ];
 
   return (
-    <div className="container mx-auto py-12 px-4">
-      <h1 className="text-4xl font-bold text-center mb-12 text-gray-800">Featured Projects</h1>
+    
+    <div className="py-12 px-4 transition-colors duration-300">
+      <h1 className="text-4xl font-bold text-center mb-12 text-gray-800 dark:text-white">
+        Featured Projects
+      </h1>
       
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         {projects.map((project, index) => (
-          <div key={index} className="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-shadow duration-300 flex flex-col">
+          
+          <div key={index} className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300 flex flex-col border border-transparent dark:border-gray-700">
             
-            <div className="h-48 bg-gray-100 flex items-center justify-center overflow-hidden border-b border-gray-100">
+            /* Added dark:bg-gray-900 for the image placeholder */
+            <div className="h-48 bg-gray-100 dark:bg-gray-900 flex items-center justify-center overflow-hidden border-b border-gray-100 dark:border-gray-700">
               <img 
                 src={`${import.meta.env.BASE_URL}${project.image}`} 
                 alt={project.title}
@@ -38,13 +43,13 @@ const Projects = () => {
               />
             </div>
 
-            
             <div className="p-6 flex-grow">
-              <h3 className="text-xl font-bold text-blue-600 mb-2">{project.title}</h3>
-              <p className="text-xs font-semibold text-gray-400 tracking-widest mb-4 uppercase">
+              <h3 className="text-xl font-bold text-blue-600 dark:text-blue-400 mb-2">{project.title}</h3>
+              <p className="text-xs font-semibold text-gray-400 dark:text-gray-500 tracking-widest mb-4 uppercase">
                 {project.tech}
               </p>
-              <p className="text-gray-600 text-sm leading-relaxed">
+              /* Added dark:text-gray-300 for readability */
+              <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
                 {project.description}
               </p>
             </div>
